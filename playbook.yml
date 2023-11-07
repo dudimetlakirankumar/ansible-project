@@ -9,6 +9,10 @@
         state: present
       notify:
         - start nginx
+    - name: Copy file
+      ansible.builtin.copy:
+        src: ./main.html
+        dest: /usr/share/nginx/html    
 
   handlers:
     - name: start nginx
