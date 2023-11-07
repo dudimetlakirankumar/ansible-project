@@ -12,7 +12,7 @@
     - name: Copy file
       ansible.builtin.copy:
         src: ./main.html
-        dest: /usr/share/nginx/html    
+        dest: /var/www/html/    
 
   handlers:
     - name: start nginx
