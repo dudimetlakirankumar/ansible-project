@@ -12,7 +12,7 @@ pipeline {
         }
         stage('ansible') {
             steps {
-                ansiblePlaybook credentialsId: 'ansible', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory', playbook: 'playbook', vaultTmpPath: ''
+                ansiblePlaybook credentialsId: 'user2', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory', playbook: 'playbook', vaultTmpPath: ''
             }
         }
     }
